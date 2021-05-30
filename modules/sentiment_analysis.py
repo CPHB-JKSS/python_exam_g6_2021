@@ -1,7 +1,7 @@
 # Imports
 from nltk.tokenize import sent_tokenize
 from modules import Afinn
-#from modules import data_preperation as dp
+from modules import data_preparation as dp
 
 # vi benytter afinn til at vurdere hvorvidt en sætning / tale er postitiv eller negativ. afinn giver en score mellem -5 (negativ) og +5 (positiv).
 afinn = Afinn(language='da')
@@ -44,8 +44,7 @@ def grade_speech_sentences_sentiment(speech):
 
     for sentence in sentences:
 
-        # TODO CLEAN SPEECH OF PUNCTUATION
-        #sentence = dp.clean_speech(sentence)
+        sentence = dp.clean_speech(sentence)
 
         count = count + 1
         score = afinn.score(sentence)
