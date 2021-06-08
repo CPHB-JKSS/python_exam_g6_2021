@@ -3,6 +3,7 @@ import re  # regular expressions
 import string  # stringfunctions
 import datetime  # datetime library
 import pandas as pd
+import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 
 
@@ -59,7 +60,22 @@ def create_data_dict():
 
     return data
 
+def create_data_dict_for_sa():
+    years = get_years()
+    data = {}
+    file = ""
 
+    for i, year in enumerate(years):
+        file = 'data/Nytårstalen '+str(year)
+        data[str(year)] = open_speech(file) #without cleaning method
+        
+    return data
+
+def to_pickle_file(filename, obj):
+    file = open(filename, 'wb')
+    pickle.dump(obj, file)
+    file.close
+    
 def data_dict_to_df(data_dict):
     df_data = pd.DataFrame.from_dict(combine_data(data_dict)).transpose()
     df_data.columns = ['speech']

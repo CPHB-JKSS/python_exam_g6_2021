@@ -44,7 +44,7 @@ def grade_speech_sentences_sentiment(speech):
 
     for sentence in sentences:
 
-        sentence = dp.clean_speech(sentence)
+        #sentence = dp.clean_speech(sentence)
 
         count = count + 1
         score = afinn.score(sentence)
