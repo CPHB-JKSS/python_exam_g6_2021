@@ -1,5 +1,5 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoakimKSS/python_exam_g6_2021/HEAD) _ main branch  
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoakimKSS/python_exam_g6_2021/tree/postHandin/HEAD) _ postHandin branch
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoakimKSS/python_exam_g6_2021/postHandin) _ postHandin branch
 
 
 # python_exam_g6_2021
